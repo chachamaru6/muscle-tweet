@@ -1,24 +1,55 @@
-# README
+# テーブル設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# users
 
-Things you may want to cover:
+|Column              |Type           |Options                 |
+|--------------------|---------------|------------------------|
+|name                |string         |null: false             |
+|email               |string         |null: false,unique: true|
+|encrypted_password  |string         |null: false             |
 
-* Ruby version
 
-* System dependencies
 
-* Configuration
+## association
+has_many :posts
+has_many :comments
+has_many :likes
 
-* Database creation
 
-* Database initialization
+# posts
 
-* How to run the test suite
+|Column              |Type            |Options                         |
+|--------------------|----------------|--------------------------------|
+|題名                 |string          |null: false                     |
+|muscle_id           |integer         |null: false                     |
+|explanation         |text            |null: false                     |
+|user                |references      |null:false, foreign_key: true   |
+|image               |Active Storage                                   |
 
-* Services (job queues, cache servers, search engines, etc.)
+## association
+belongs_to :user
+has_many :comments
+has_many :likes
+has_one_attached :image
 
-* Deployment instructions
+# comments
+|Column              |Type            |Options                         |
+|--------------------|----------------|--------------------------------|
+|post_id             |string          |null: false                     |
+|user_id             |string          |null: false                     |
+|comment             |text            |null: false                     |
 
-* ...
+## association
+belongs_to :user
+belongs_to :post
+has_one :post
+
+# likes
+|Column              |Type            |Options                         |
+|--------------------|----------------|--------------------------------|
+|post_id             |string          |null: false                     |
+|user_id             |string          |null: false                     |
+
+## association
+belongs_to :user
+belongs_to :post
