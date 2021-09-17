@@ -1,10 +1,19 @@
-<div class="contents row">
-  <% @posts.each do |post| %>
-    <div class="content_post" style="background-image: url(<%= post.image %>);">
-      <p><%= post.text %></p>
-      <span class="name">
-        <%= post.name %>
-      </span>
+  <body>
+  <header>
+    </header>
+
+    <div class="contents">
+      <div class="first-view">
+        <!-- 『トップ画像』を表示する -->
+      </div>
+      <div class="upper-content">
+        <!-- 『新着情報』を表示する -->
+      </div>
+      <div class="middle-content">
+        <!-- 『スタイリスト紹介』を表示する -->
+      </div>
+      <div class="bottom-content">
+        <!-- 『フォーム』を表示する -->
+      </div>
     </div>
-  <% end %>
-</div>
+  </body>
