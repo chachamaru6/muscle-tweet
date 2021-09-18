@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MuscleTweet</title>
+    <title>MuscleApp</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,19 +10,22 @@
   </head>
 
   <body>
-  <header class="header">
-      <div class="header__bar row">
-        <h1 class="grid-6"><a href="/">Muscle-Tweet</a></h1>
-        <div class="user_nav grid-6">
-          <a class="post" href="/tweets/new">投稿する</a>
+  <header>
+        <div class="heading">
+        <h1 class="title">MuscleApp</h1>
         </div>
-      </div>
-    </header>
+        <div class="navbar">
+         <div class="nav-lists">
+          <div><%= link_to "投稿ページ",new_post_path, method: :get %></div>
+          <div><%= link_to "ログイン", new_user_session_path, method: :get %></div>
+          <div><%= link_to "新規登録", new_user_registration_path, method: :get %></div>
+          <div><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></div>
+        </ul>
+        </div>
+  </header>
     <%= yield %>
     <footer>
-      <p>
-        Copyright MuscleTweet 2021.
-      </p>
+      <p>Copyright MuscleTweet 2021.</p>
     </footer>
   </body>
 </html>
