@@ -12,14 +12,18 @@
   <body>
   <header>
         <div class="heading">
-        <h1 class="title">MuscleApp</h1>
+        <h1 class="title"><%= link_to "MuscleApp", root_path %></h1>
         </div>
         <div class="navbar">
          <div class="nav-lists">
-          <div><%= link_to "投稿ページ",new_post_path, method: :get %></div>
+         <% if user_signed_in? %>
+          <div><%= link_to current_user.name, "#" %></div>
+          <div><%= link_to "投稿ページ", new_post_path, method: :get %></div>
+          <div><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></div>
+          <% else %>
           <div><%= link_to "ログイン", new_user_session_path, method: :get %></div>
           <div><%= link_to "新規登録", new_user_registration_path, method: :get %></div>
-          <div><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></div>
+          <% end %>
         </ul>
         </div>
   </header>
