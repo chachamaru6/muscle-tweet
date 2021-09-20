@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :move_to_index, except: [:index]
+  before_action :set_post, only: [:show, :edit]
   
   def index
     @posts = Post.order("created_at DESC")
@@ -18,6 +19,22 @@ class PostsController < ApplicationController
     end
   end
 
+  def show
+  end
+
+  def destroy
+    post = Post.find(params[:id])
+    post.destroy
+  end
+
+  def edit
+  end
+
+  def update
+    post = Post.find(params[:id])
+    post.update(post_params)
+  end
+
   private
 
   def move_to_index
@@ -30,5 +47,7 @@ class PostsController < ApplicationController
     params.require(:post).permit(:name, :explanation, :image, :muscle_id).merge(user_id: current_user.id)
   end
 
-  
+  def set_post
+    @post = Post.find(params[:id])
+  end
 end

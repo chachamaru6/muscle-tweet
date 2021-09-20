@@ -1,0 +1,57 @@
+  <div class="items-sell-main">
+    <h2 class="items-sell-title">商品の情報を入力</h2>
+    <%= form_with(model: @post, local: true) do |f| %>
+
+    <%#= render 'shared/error_messages', model: f.object %>
+
+    <%# トレ画像 %>
+    <div class="img-upload">
+      <div class="weight-bold-text">
+        商品画像
+        <span class="indispensable">必須</span>
+      </div>
+      <div class="click-upload">
+        <p>
+          クリックしてファイルをアップロード
+        </p>
+        <%= f.file_field :image, id:"item-image" %>
+      </div>
+    </div>
+    <%# /トレ画像 %>
+    <%# トレ名とトレ説明 %>
+    <div class="new-items">
+      <div class="weight-bold-text">
+        トレーニングタイトル
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :name, class:"items-text", id:"post-name", placeholder:"トレ名（必須 40文字まで)", maxlength:"40" %>
+      <div class="items-explain">
+        <div class="weight-bold-text">
+          悩みorモチベーション
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_area :explanation, class:"items-text", id:"post-info", placeholder:"悩みorモチベーション（必須 1,000文字まで）" ,rows:"7" ,maxlength:"1000" %>
+      </div>
+    </div>
+    <%# /トレ名とトレ説明 %>
+    <%# 商品の詳細 %>
+    <div class="items-detail">
+      <div class="weight-bold-text">トレの詳細</div>
+      <div class="form">
+        <div class="weight-bold-text">
+          カテゴリー
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:muscle_id, Muscle.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
+      </div>
+      </div>
+    </div>
+    <%# /商品の詳細 %>
+    <%# 下部ボタン %>
+    <div class="sell-btn-contents">
+      <%= f.submit "変更する" ,class:"sell-btn" %>
+      <%=link_to 'もどる', "#", class:"back-btn" %>
+    </div>
+    <%# /下部ボタン %>
+    <% end %>
+  </div>

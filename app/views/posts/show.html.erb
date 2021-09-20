@@ -1,0 +1,19 @@
+<div class="item-show">
+  <div class="item-box">
+    <h2 class="name">
+      <%= @post.name %>
+    </h2>
+    <div class="item-img-content", id="image-list">
+      <%= image_tag @post.image ,class:"item-box-img" %>
+    </div>
+    <% if user_signed_in? && current_user.id == @post.user_id %> 
+     <%= link_to "商品の編集", edit_post_path(@post.id), method: :get, class: "item-red-btn" %>
+     <p class="or-text">or</p>
+     <%= link_to "削除", post_path(@post.id), method: :delete, class:"item-destroy" %>
+    <% end %>
+
+    <div class="item-explain-box">
+      <span><%= @post.explanation %></span>
+    </div>
+  </div>
+</div>
