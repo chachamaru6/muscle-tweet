@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to: "posts#index"
   resources :posts do
    resources :muscle_id
+   resources :comments, only: [:create]
   end
-  
+
 end

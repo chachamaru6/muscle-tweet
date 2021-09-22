@@ -6,14 +6,31 @@
     <div class="item-img-content", id="image-list">
       <%= image_tag @post.image ,class:"item-box-img" %>
     </div>
-    <% if user_signed_in? && current_user.id == @post.user_id %> 
-     <%= link_to "商品の編集", edit_post_path(@post.id), method: :get, class: "item-red-btn" %>
-     <p class="or-text">or</p>
-     <%= link_to "削除", post_path(@post.id), method: :delete, class:"item-destroy" %>
-    <% end %>
 
     <div class="item-explain-box">
-      <span><%= @post.explanation %></span>
+    <% if user_signed_in? && current_user.id == @post.user_id %> 
+     <%= link_to "EDIT", edit_post_path(@post.id), method: :get, class: "item-red-btn" %>
+     <p class="or-text">or</p>
+     <%= link_to "DESTROY", post_path(@post.id), method: :delete, class:"item-destroy" %>
+    <% end %>
+    <br>
+      <span>EXPLANATION<br><%= @post.explanation %></span>
+    </div>
+    <div class = "muscle-share">
+    <h3>Muscle shared</h3>
+    <%= form_for [@post, @comment] do |f| %>
+    <%= f.text_area :text, size: "40x5" %>
+    <%= f.submit '送信', class: "btn-sm btn-primary" %>
+    <% end %>
+    </div>
+    <table>
+    <% @comments.each do |comment| %>
+      <tr>
+      <th><%= comment.text %></th>
+      </tr>
+    <% end %>
+    </table>
+
     </div>
   </div>
 </div>

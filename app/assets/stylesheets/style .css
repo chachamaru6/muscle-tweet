@@ -17,7 +17,7 @@ ul,li {
 /* ヘッダー */
 header {
   height: 50px;
-  background-color: #f0f0f0;
+  background-color: whitesmoke;
   padding: 10px 0;
   display: flex;
 }
@@ -51,12 +51,12 @@ li {
 }
 
 .first-view{
-  height: 60vh;
+  height: 100vh;
   position: relative;
 }
 .first-view p {
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
   -ms-transform: translate(-50%,-50%);
   -webkit-transform: translate(-50%,-50%);
@@ -67,14 +67,9 @@ li {
   font-size: 80px;
 }
 
-/* 投稿一覧 
+/* 投稿一覧 */
 .upper-content{
-  height: 450px;
-  margin: 0 160px;
-}*/
-
-.upper-content{
-  background-color: #FFF;
+  background-color:pink;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -96,7 +91,7 @@ li {
   text-align: center;
   border-bottom: 1px solid red;
   width: 200px;
-  margin: 40px auto;
+  margin: 30px auto;
 }
 .item-lists {
   width: 100vw;
@@ -111,23 +106,19 @@ li {
   background-color: #FFF;
 }
 
-
-.item-img-content {
-  position: relative;
-}
-
 .item-img {
   width: 33vh;
   height: 33vh;
 }
 .item-info {
-  background-color: #FFF;
+  background-color: whitesmoke;
   color: black;
   padding: 1vw;
 }
 
 .item-name {
-  font-size: 2.5vh;
+  font-size: 2.0vh;
+  width: 30vh;
 }
 
 /* トレーニング紹介 */
@@ -218,55 +209,23 @@ li {
   font-weight: normal;
   text-align: center;
 }
-
-/*
-.middle-content{
-  width:100%;
-  background-color:#fafafa;
-  max-width:1000px;
-    margin:0px auto;
-    padding:80px 0px;
-}
-.middle-content .body-list .body-one{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.middle-content .body-image{
-  display:block;
-    max-width:100%;
-    margin:0px auto;
-}
-.middle-content .text{
-  padding: 50px;
-}
-.middle-content .text .body-name{
-  margin:0px 0px 40px 0px;
-  font-size: 24px;
-  font-weight: normal;
-  text-align: center;
+/*ボタン*/
+a.btn--yellow {
+  color: #000;
+  background-color: #fff100;
+  border-bottom: 5px solid #ccc100;
 }
 
-.body-list{
-  display: flex;
-  justify-content: space-around;
-  margin: 60px 0;
-}
-.body-image{
-  height: 300px;
-  width: 100%;
-}
-.body-one{
-  flex-basis: 100%;
-}
-.body-name{
-  font-size: 16px;
-  text-align: center;
+a.btn--yellow:hover {
+  margin-top: 3px;
+  color: #000;
+  background: # fff20a;
+  border-bottom: 2px solid #ccc100;
 }
 
 /* フォーム */
 .bottom-content {
-  height: 800px;
+  height: 100px;
   margin: 0 160px;
   display: flex;
   justify-content: center;
@@ -302,9 +261,30 @@ li {
 /* フッター */
 footer {
   height: 50px;
-  background-color: #f0f0f0;
+  background-color: whitesmoke;
   text-align: center;
   color: gray;
 }
 
-/* ユーザー新規登録画面 */
+/* 詳細ページ */
+.item-box-img{
+  width: 80%;
+  height: auto;
+}
+.item-img-content{
+  width: 70%;
+}
+
+.muscle-share{
+  text-align: right;
+  position: relative;
+  right: 50px;
+  bottom: 70vh;
+}
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(200, 200, 200);
+  letter-spacing: 1px;
+  font-family: sans-serif;
+  font-size: .8rem;
+}
