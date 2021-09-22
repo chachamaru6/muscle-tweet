@@ -17,19 +17,21 @@
       <span>EXPLANATION<br><%= @post.explanation %></span>
     </div>
     <div class = "muscle-share">
+    
     <h3>Muscle shared</h3>
-    <%= form_for [@post, @comment] do |f| %>
-    <%= f.text_area :text, size: "40x5" %>
-    <%= f.submit '送信', class: "btn-sm btn-primary" %>
-    <% end %>
+    <%#= form_for [@post, @comment] do |f| %>
+    <%#= f.text_area :text, size: "40x5" %>
+    <%#= f.submit '送信', class: "btn-sm btn-primary" %>
+    <%# end %>
     </div>
     <table>
-    <% @comments.each do |comment| %>
+    <%# @comments.each do |comment| %>
       <tr>
-      <th><%= comment.text %></th>
+      <th><%#= comment.text %></th>
       </tr>
-    <% end %>
+    <%# end %>
     </table>
+    
 
     </div>
   </div>
