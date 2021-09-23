@@ -2,12 +2,10 @@ class CommentsController < ApplicationController
 
   def create
     @post = Post.find(params[:post_id])
-    @comment = current_user.comments.new(comment_params)
-    @comment.user_id = current_user.id
+    @comment = Comment.new(comment_params)
     if @comment.save
-      redirect_to request.referer
+      redirect_to post_path(@post)
     else
-      @comments = @post.comments
       redirect_to root_path
     end
   end
@@ -17,7 +15,7 @@ class CommentsController < ApplicationController
 
   private
   def comment_params
-    params.require(:comment).permit(:text, :user_id, :post_id)
+    params.require(:comment).permit(:text).merge(user_id: current_user.id, post_id: params[:post_id])
   end
 
 end

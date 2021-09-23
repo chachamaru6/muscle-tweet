@@ -17,13 +17,16 @@ ul,li {
 /* ヘッダー */
 header {
   height: 50px;
-  background-color: whitesmoke;
+  background-color: rgb(101, 101, 128);
   padding: 10px 0;
   display: flex;
 }
 .heading {
   width: 50%;
   margin-left: 30px;
+}
+header a{
+  color: white;
 }
 .navbar {
   width: 50%;
@@ -56,7 +59,7 @@ li {
 }
 .first-view p {
   position: absolute;
-  top: 60%;
+  top: 50%;
   left: 50%;
   -ms-transform: translate(-50%,-50%);
   -webkit-transform: translate(-50%,-50%);
@@ -64,7 +67,7 @@ li {
   margin:0;
   padding:0;
   color: rgba(255, 255, 255, 0.6);
-  font-size: 80px;
+  font-size: 50px;
 }
 
 /* 投稿一覧 */
@@ -267,6 +270,14 @@ footer {
 }
 
 /* 詳細ページ */
+
+.item-show{
+padding: 20px 20px;
+}
+.item-box{
+  position: relative;
+}
+
 .item-box-img{
   width: 80%;
   height: auto;
@@ -274,10 +285,31 @@ footer {
 .item-img-content{
   width: 70%;
 }
-
-.muscle-share{
-  text-align: right;
-  position: relative;
+.muscle{
+  text-align: center;
+}
+table{
+  position: absolute;
   right: 50px;
-  bottom: 70vh;
+  bottom: 200px;
+}
+th{
+  position: relative;
+  display: inline-block;
+  margin: 1.5em 0 1.5em 15px;
+  padding: 7px 10px;
+  min-width: 120px;
+  max-width: 100%;
+  color: #555;
+  font-size: 8px;
+  background: #e0edff;
+}
+th:before{
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -30px;
+  margin-top: -15px;
+  border: 15px solid transparent;
+  border-right: 15px solid #e0edff;
 }
