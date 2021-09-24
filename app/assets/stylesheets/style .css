@@ -127,7 +127,7 @@ li {
 /* トレーニング紹介 */
 .wrapper{
   width:100%;
-  background-color:#fafafa;
+  background-color: skyblue;
 }
 .wrapper .container{
   max-width:1000px;
@@ -168,7 +168,7 @@ li {
 /*逆レイアウト*/
 .wrapper1{
   width:100%;
-  background-color:#fafafa;
+  background-color: lightgray;
 }
 .wrapper1 .container1{
   max-width:1000px;
@@ -228,7 +228,6 @@ a.btn--yellow:hover {
 
 /* フォーム */
 .bottom-content {
-  height: 100px;
   margin: 0 160px;
   display: flex;
   justify-content: center;
@@ -273,6 +272,9 @@ footer {
 
 .item-show{
 padding: 20px 20px;
+background-color:skyblue
+;
+
 }
 .item-box{
   position: relative;
