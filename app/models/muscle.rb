@@ -11,10 +11,10 @@ class Muscle < ActiveHash::Base
     { id: 9, name: '腹筋（体幹）' },
     { id: 10, name: '腹直筋（体幹）' },
     { id: 11, name: '大腿四頭筋（脚）' },
-    { id: 12, name: '大腿二頭筋（脚）'},
-    { id: 13,name: '大臀筋（お尻）'}
+    { id: 12, name: '大腿二頭筋（脚）' },
+    { id: 13, name: '大臀筋（お尻）' }
   ]
 
   include ActiveHash::Associations
   has_many :posts
-  end
+end

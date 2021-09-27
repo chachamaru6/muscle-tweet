@@ -1,9 +1,9 @@
 class PostsController < ApplicationController
   before_action :move_to_index, except: [:index]
   before_action :set_post, only: [:show, :edit]
-  
+
   def index
-    @posts = Post.order("created_at DESC")
+    @posts = Post.order('created_at DESC')
   end
 
   def new
@@ -40,9 +40,7 @@ class PostsController < ApplicationController
   private
 
   def move_to_index
-    unless user_signed_in?
-      redirect_to action: :index
-    end
+    redirect_to action: :index unless user_signed_in?
   end
 
   def post_params
