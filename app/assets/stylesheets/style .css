@@ -17,7 +17,7 @@ ul,li {
 /* ヘッダー */
 header {
   height: 50px;
-  background-color: rgb(101, 101, 128);
+  background-color: gray;
   padding: 10px 0;
   display: flex;
 }
@@ -45,18 +45,19 @@ li {
 
 /* first-viewクラスからbottom-contentクラスまでの要素の親要素 */
 .contents {
-  background-color: white;
-}
-
-.top-image{
-  height: 100%;
-  width: 100%;
+  background-color: black;
 }
 
 .first-view{
   height: 100vh;
   position: relative;
+  background-image: url('/2018_13_MEkkmTI.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
+
 .first-view p {
   position: absolute;
   top: 50%;
@@ -71,58 +72,27 @@ li {
 }
 
 /* 投稿一覧 */
-.upper-content{
-  background-color:pink;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 10vh 0;
-}
-.upper-content>.heading-name {
-  font-size: 5vh;
-  line-height: 1.4;
-  font-weight: bold;
-}
-.upper-content>.subtitle {
-  font-size: 3vh;
-  margin: 1vh 0;
-  text-decoration: none;
-  color: #3ccace;
-  font-weight: bold;
-}
-.heading-name {
-  text-align: center;
-  border-bottom: 1px solid red;
-  width: 200px;
-  margin: 30px auto;
-}
-.item-lists {
+.upper{
   width: 100vw;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  height: 100vh;
 }
-
-.item-lists>.list {
-  width: 37vh;
-  padding: 1vw;
-  background-color: #FFF;
+.middle{
+  display: flex;
+  justify-content: center;
+  margin: 100px;
+}
+.upper-content{
+  width: 40%;
+  height: 50%;
+}
+.slider {/*横幅94%で左右に余白を持たせて中央寄せ*/
+  width: 100%;
 }
 
 .item-img {
-  width: 33vh;
-  height: 33vh;
-}
-.item-info {
-  background-color: whitesmoke;
-  color: black;
-  padding: 1vw;
+  width: 100%;/*スライダー内の画像を横幅100%に*/
 }
 
-.item-name {
-  font-size: 2.0vh;
-  width: 30vh;
-}
 
 /* トレーニング紹介 */
 .wrapper{
