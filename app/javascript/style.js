@@ -4,5 +4,4 @@ $('.slider').slick({
   infinite: true,//スライドをループさせるかどうか。初期値はtrue。
   dots: true,//下部ドットナビゲーションの表示
 });
-
 });

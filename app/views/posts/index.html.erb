@@ -7,19 +7,19 @@
 
 
   <div class="upper">
-  <div class="middle">
-  <div class="upper-content">
-  <h2 class="heading-name">投稿一覧</h2>
-   <div class="slider">
-   <% @posts.each do |post| %>
-   <%= link_to post_path(post.id) do %>
-   <%= image_tag post.image, class: "item-img" %>
-   <% end %>
-   <% end %>
+   <div class="middle">
+    <div class="upper-content">
+    <h2 class="heading-name">投稿一覧</h2>
+    <div class="slider">
+    <% @posts.each do |post| %>
+    <%= link_to post_path(post.id) do %>
+    <%= image_tag post.image, class: "item-img" %>
+    <% end %>
+    <% end %>
 
+    </div>
+    </div>
    </div>
-  </div>
-  </div>
   </div>
 
 

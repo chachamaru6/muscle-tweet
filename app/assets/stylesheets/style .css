@@ -7,6 +7,7 @@ body {
 h1,h2,h3,h4,h5,h6,p {
   padding: 10px 0;
   margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 ul,li {
@@ -17,10 +18,11 @@ ul,li {
 /* ヘッダー */
 header {
   height: 50px;
-  background-color: gray;
+  background-color: rgb(205, 206, 203);
   padding: 10px 0;
   display: flex;
 }
+
 .heading {
   width: 50%;
   margin-left: 30px;
@@ -45,7 +47,7 @@ li {
 
 /* first-viewクラスからbottom-contentクラスまでの要素の親要素 */
 .contents {
-  background-color: black;
+  background-color: rgb(218, 219, 208);
 }
 
 .first-view{
@@ -69,6 +71,7 @@ li {
   padding:0;
   color: rgba(255, 255, 255, 0.6);
   font-size: 50px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* 投稿一覧 */
@@ -82,16 +85,18 @@ li {
   margin: 100px;
 }
 .upper-content{
-  width: 40%;
+  width: 50%;
   height: 50%;
 }
-.slider {/*横幅94%で左右に余白を持たせて中央寄せ*/
+.slider {
   width: 100%;
 }
 
 .item-img {
-  width: 100%;/*スライダー内の画像を横幅100%に*/
+  width: 100%;
+  height: 300px;
 }
+
 
 
 /* トレーニング紹介 */
