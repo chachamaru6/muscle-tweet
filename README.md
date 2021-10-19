@@ -1,6 +1,7 @@
 # MuscleApp
 # 概要
 トレーニング好きのためのアプリ、トレーニングに関する情報や悩みをshareすることができます。
+初めてのオリジナルアプリになります。
 # 本番環境(デプロイ先　テストアカウント＆ID)
 https://muscle-tweet-36589.herokuapp.com/posts/55
 Basic認証
